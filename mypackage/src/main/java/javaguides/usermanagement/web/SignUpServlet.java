@@ -13,7 +13,8 @@ import java.sql.SQLException;
 @WebServlet("/signup")
 public class SignUpServlet extends HttpServlet {
 
-    UserServiceImpl userServiceImpl = UserServiceImpl.getInstance();
+    private UserServiceImpl userServiceImpl = UserServiceImpl.getInstance();
+    /*может быть фильтр вызвается вперед хотя вроде в фильтрах нет слова анавторайзед*/
 
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response) {
